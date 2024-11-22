@@ -1,5 +1,5 @@
 let clickCount = 0;
-const maxClicks = 3;
+const maxClicks = 5;
 
 const openMessageBtn = document.getElementById('open-message-btn');
 const birthdayMessage = document.getElementById('birthday-message');
@@ -41,3 +41,26 @@ function moveButtonRandomly() {
     openMessageBtn.style.left = randomX + 'px';
     openMessageBtn.style.top = randomY + 'px';
 }
+document.getElementById('open-message-btn').addEventListener('click', function() {
+    // Menampilkan ucapan
+    document.getElementById('birthday-message').style.display = 'block';
+
+    // Memutar audio
+    var audio = document.getElementById('birthday-audio');
+    audio.play();  // Memulai pemutaran lagu
+
+    // Menyembunyikan tombol "Buka Ucapan"
+    this.style.display = 'none';
+});
+
+document.getElementById('close-message-btn').addEventListener('click', function() {
+    // Menyembunyikan ucapan
+    document.getElementById('birthday-message').style.display = 'none';
+
+    // Menampilkan tombol "Buka Ucapan"
+    document.getElementById('open-message-btn').style.display = 'block';
+
+    // Menjeda dan mengulang lagu
+    var audio = document.getElementById('birthday-audio');
+    audio.pause();  // Menjeda lagu
+    audio.currentTime = 0;  // Mengulang lagu dari awal
