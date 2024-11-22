@@ -1,5 +1,5 @@
 let clickCount = 0;
-const maxClicks = 5;
+const maxClicks = 3;
 
 const openMessageBtn = document.getElementById('open-message-btn');
 const birthdayMessage = document.getElementById('birthday-message');
