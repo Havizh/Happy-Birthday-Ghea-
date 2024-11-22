@@ -43,12 +43,6 @@ button:hover {
     background-color: #ff9900;
 }
 
-.cat-image {
-    width: 200px;
-    margin: 20px 10px;
-    border-radius: 10px;
-}
-
 .message-content p {
     font-size: 18px;
     line-height: 1.6;
